@@ -40,7 +40,7 @@ public class User {
         return value;
     }
 
-    public static double inputDouble(String message) {
+    public static double inputUnit(String message) {
         // This method calls inputDouble(), so no changes are needed here.
         System.out.printf("%s", message);
         double value = inputDouble();
@@ -114,21 +114,8 @@ public class User {
         while(isInputBad) {
             if(userScan.hasNextDouble()) {
                 value = userScan.nextDouble();
-                userScan.nextLine(); // clean up input stream
-
-
-
-                if (value == 1 || value == 2 || value == 3) {
-                    isInputBad = false;
-
-                } else {
-                    System.out.println("Please enter 1 or 2 or 3 only");
-                    isInputBad = true;
-
-                }
-
-
-
+                userScan.nextLine(); // clean up input stream\
+                isInputBad = false;
             }
             else {
                 System.out.print("Invalid input. Enter an integer number: ");
