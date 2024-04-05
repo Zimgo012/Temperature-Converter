@@ -9,6 +9,7 @@ public class Driver {
     public static void main(String[] args) {
 
         User user1 = new User();
+        UnitSelector unitSelector = new UnitSelector();
 
         System.out.println("Welcome to Temperature Converter");
 
@@ -28,8 +29,12 @@ public class Driver {
                             Press [2] for Fahrenheit \s
                             Press [3] for Kelvin   \n"""));
 
-        //Snippet for user input
-        System.out.println(user1.getChoice1() + " and " + user1.getChoice2());
+
+        unitSelector.selector(user1.getChoice1(), user1.getChoice2());
+
+
+
+
 
     }
 }
