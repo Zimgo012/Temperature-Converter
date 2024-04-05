@@ -40,6 +40,13 @@ public class User {
         return value;
     }
 
+    public static double inputDouble(String message) {
+        // This method calls inputDouble(), so no changes are needed here.
+        System.out.printf("%s", message);
+        double value = inputDouble();
+        return value;
+    }
+
 
     /*
      * Does not prompt the user, reads in an int value when there is one. If
@@ -52,33 +59,86 @@ public class User {
      * private access modifier prohibits use of method from outside of the class
      * forcing the use of the method that accepts the String prompt in order
      * to get the value.
-     */
+     * */
     private static int inputInteger() {
 
         boolean isInputBad = true;
-        boolean hasNextInt = userScan.hasNextInt();
         int value = 0;
 
         while(isInputBad) {
-            if(hasNextInt) {
+            if(userScan.hasNextInt()) {
                 value = userScan.nextInt();
+                userScan.nextLine(); // clean up input stream
 
-                if (value == 1 || value == 2 || value == 3){
-                    isInputBad = false; // break out of loop
 
-                }
-                else {
-                    System.out.println("Please enter 1 or 2 or 3 only");
-                }
+
+                    if (value == 1 || value == 2 || value == 3) {
+                        isInputBad = false;
+
+                    } else {
+                        System.out.println("Please enter 1 or 2 or 3 only");
+                        isInputBad = true;
+
+                    }
+
+
+
             }
             else {
                 System.out.print("Invalid input. Enter an integer number: ");
+                userScan.nextLine(); // clean up input stream
             }
-           userScan.nextLine(); // clean up input stream
+
 
 
         }
         return value;
+    }
+
+    /*
+     * Does not prompt the user, reads in double value when there is one. If
+     * the user does not provide input that can be converted into a double an
+     * error message is printed requesting a correct input and a loop is used
+     * to trap the user until they get this right. A future version of
+     * the program might have a sanity check to break the loop after several
+     * failed attempts and then shut down the program, rather than looping
+     * (in theory) forever.
+     * private access modifier prohibits use of method from outside of the class
+     * forcing the use of the method that accepts the String prompt in order
+     * to get the value.
+     * */
+    private static double inputDouble() {
+        boolean isInputBad = true;
+        double value = 0.0;
+
+        while(isInputBad) {
+            if(userScan.hasNextDouble()) {
+                value = userScan.nextDouble();
+                userScan.nextLine(); // clean up input stream
+
+
+
+                if (value == 1 || value == 2 || value == 3) {
+                    isInputBad = false;
+
+                } else {
+                    System.out.println("Please enter 1 or 2 or 3 only");
+                    isInputBad = true;
+
+                }
+
+
+
+            }
+            else {
+                System.out.print("Invalid input. Enter an integer number: ");
+                userScan.nextLine(); // clean up input stream
+            }
+
+
+
+        }
+        return  value;
     }
 
 
