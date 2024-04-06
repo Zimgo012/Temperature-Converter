@@ -1,3 +1,10 @@
+/* This class helps users input numbers for temperature conversions.
+It provides methods to set and get the user's choices for base and derived units.
+These methods make sure the input is correct by repeating the process until a valid number is given.
+This makes the program more reliable.
+ */
+
+
 import java.util.Scanner;
 
 public class User {
