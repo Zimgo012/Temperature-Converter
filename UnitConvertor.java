@@ -58,11 +58,34 @@ public class UnitConvertor {
         this.kelvin = kelvin;
     }
 
-    public double calculateCToF (){ //method that returns a double of converted celsius to fahrenheit
+    public double calculateCToF (){ //method that convert Celsius to Fahrenheit and return it as double.
 
-        double convert = celsius * ((double) 9 / 5) + 32;
-        return convert;
+        return celsius * ((double) 9 / 5) + 32;
     }
 
+    public double calculateCToK (){ //method that convert Celsius to Kelvin and return it as double.
+
+        return celsius + 273.15;
+    }
+
+    public double calculateFToC (){ //method that convert Fahrenheit to Celsius and return it as double.
+
+        return fahrenheit - 32 * ((double)5 / 9);
+    }
+
+    public double calculateFToK (){ //method that convert Fahrenheit to Kelvin and return it as double.
+
+        return (fahrenheit - 32) * ((double) 5 / 9) + 273.15;
+    }
+
+    public double calculateKToC (){ //method that convert Kelvin to Celsius and return it as double.
+
+        return kelvin - 273.15;
+    }
+
+    public double calculateKToF (){ //method that convert Kelvin to Fahrenheit and return it as double.
+
+        return kelvin - 273.15 * ((double)9 / 5) + 32;
+    }
 
 }
