@@ -15,7 +15,8 @@ public class User {
 
     private int choice2;
     public User (){
-
+        this.choice1 = 0;
+        this.choice2 = 0;
     }
 
     public int getChoice1() {
@@ -37,21 +38,18 @@ public class User {
 
     public static int inputFirstInteger(String message) {
         System.out.printf("%s", message);
-        int value = inputInteger();
-        return value;
+        return inputInteger();
     }
 
     public static int inputSecondInteger(String message) {
         System.out.printf("%s", message);
-        int value = inputInteger();
-        return value;
+        return inputInteger();
     }
 
     public static double inputUnit(String message) {
         // This method calls inputDouble(), so no changes are needed here.
         System.out.printf("%s", message);
-        double value = inputDouble();
-        return value;
+        return inputDouble();
     }
 
 
@@ -84,8 +82,6 @@ public class User {
 
                     } else {
                         System.out.println("Please enter 1 or 2 or 3 only");
-                        isInputBad = true;
-
                     }
 
 
@@ -95,6 +91,7 @@ public class User {
                 System.out.print("Invalid input. Enter an integer number: ");
                 userScan.nextLine(); // clean up input stream
             }
+
 
 
 
@@ -121,7 +118,7 @@ public class User {
         while(isInputBad) {
             if(userScan.hasNextDouble()) {
                 value = userScan.nextDouble();
-                userScan.nextLine(); // clean up input stream\
+                userScan.nextLine(); // clean up input stream
                 isInputBad = false;
             }
             else {
@@ -134,6 +131,33 @@ public class User {
         }
         return  value;
     }
+ public static String inputRespond(String message){
+     System.out.printf("%s", message);
+     return inputRespond();
+ }
+
+ private static String inputRespond(){
+        boolean isInputBad = true;
+        String input = "";
+
+        while(isInputBad){
+            if(userScan.hasNextLine()){
+                input = userScan.nextLine();
+
+
+
+                if ((input.equalsIgnoreCase("yes")) || (input.equalsIgnoreCase("NO")) ){
+                    isInputBad = false;
+                }else {
+                    System.out.println("Enter YES or NO only");
+
+
+                }
+            }
+        }
+        return input;
+ }
+
 
 
 }
