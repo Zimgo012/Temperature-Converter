@@ -81,14 +81,15 @@ public class User {
                         isInputBad = false;
 
                     } else {
-                        System.out.println("Please enter 1 or 2 or 3 only");
+                        System.err.println("Please respond [1] or [2] or [3] only");
                     }
 
 
 
             }
             else {
-                System.out.print("Invalid input. Enter an integer number: ");
+                System.err.print("Invalid input!\n");
+                System.out.println("Enter a number:");
                 userScan.nextLine(); // clean up input stream
             }
 
@@ -122,7 +123,8 @@ public class User {
                 isInputBad = false;
             }
             else {
-                System.out.print("Invalid input. Enter an integer number: ");
+                System.err.print("Invalid input!\n");
+                System.out.println("Enter a number:");
                 userScan.nextLine(); // clean up input stream
             }
 
@@ -149,7 +151,8 @@ public class User {
                 if ((input.equalsIgnoreCase("yes")) || (input.equalsIgnoreCase("NO")) ){
                     isInputBad = false;
                 }else {
-                    System.out.println("Enter YES or NO only");
+                    System.err.println("Invalid input!\n");
+                    System.out.println("Enter YES or NO.");
 
 
                 }
