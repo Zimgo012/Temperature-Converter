@@ -7,7 +7,7 @@ It allows users to easily convert temperatures from one scale to another, facili
 
 
 # Requirements in order to run the program
-- IDE (VSCode, IntteliJ, Eclipse)
+- IDE (VSCode, IntelliJ, Eclipse, etc.)
 - Source Files in this project
 
 
