@@ -6,12 +6,12 @@ This temperature converter is program built in pure java, that is  designed to c
 It allows users to easily convert temperatures from one scale to another, facilitating convenient comparisons or calculations across different temperature scales.
 
 
-# Requirements on running the program
+# Requirements in order to run the program
 - IDE (VSCode, IntteliJ, Eclipse)
 - Source Files in this project
 
 
-# Instructions on how to use this program.
+# Instructions on how to use this program
 
 1. Download all the source code in the folder.
 2. Open the files using the IDE of your choice.
