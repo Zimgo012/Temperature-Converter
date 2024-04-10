@@ -24,7 +24,11 @@ public class UnitConvertor {
     private double celsius;
     private double fahrenheit;
     private double kelvin;
-    public UnitConvertor (){}
+    public UnitConvertor (){
+        this.celsius = 0;
+        this.fahrenheit = 0 ;
+        this.kelvin = 0;
+    }
 
 
     //Accessor for Celsius
